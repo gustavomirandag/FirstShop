@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorFS", "GerenciadorFS\GerenciadorFS.csproj", "{659BB60F-F000-4E59-A7EA-425284FD7F3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaFS", "BibliotecaFS\BibliotecaFS.csproj", "{EF818A68-E880-4739-B053-808BF19662C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaOnlineFS", "LojaOnlineFS\LojaOnlineFS.csproj", "{2C5A0E3A-F9EB-45F0-B18A-FDDC0815B231}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{659BB60F-F000-4E59-A7EA-425284FD7F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659BB60F-F000-4E59-A7EA-425284FD7F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659BB60F-F000-4E59-A7EA-425284FD7F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659BB60F-F000-4E59-A7EA-425284FD7F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF818A68-E880-4739-B053-808BF19662C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF818A68-E880-4739-B053-808BF19662C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF818A68-E880-4739-B053-808BF19662C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF818A68-E880-4739-B053-808BF19662C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5A0E3A-F9EB-45F0-B18A-FDDC0815B231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5A0E3A-F9EB-45F0-B18A-FDDC0815B231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5A0E3A-F9EB-45F0-B18A-FDDC0815B231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5A0E3A-F9EB-45F0-B18A-FDDC0815B231}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
