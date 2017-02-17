@@ -4,14 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliotecaFS.Modelo
+namespace FirstShop.BibliotecaFS.Modelo
 {
-    class Produto
+    public class Produto
     {
         private string nome;
         private string categoria;
         private string foto;
         private float preco;
+
+        public string toString()
+        {
+            return nome + ";" + categoria + ";" + foto + ";" + preco.ToString();
+        }
 
         public string Nome
         {
@@ -65,6 +70,13 @@ namespace BibliotecaFS.Modelo
                 this.preco = preco;
             return true;
         }
+
+        public float obterPreco()
+        {
+            return preco;
+        }
+
+
 
 
     }
