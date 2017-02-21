@@ -13,6 +13,25 @@ namespace FirstShop.BibliotecaFS.Modelo
         private string foto;
         private float preco;
 
+        public Produto()
+        {
+            //Construtor padrão de um Produto
+        }
+
+        /// <summary>
+        /// Cria um objeto do tipo produto através de uma string com os campos separados por ";"
+        /// Na ordem: nome ; categoria ; foto ; preco
+        /// </summary>
+        /// <param name="produtoTxt">String com os campos de um produto separados por ";"</param>
+        public Produto(string produtoTxt)
+        {
+            string[] campos = produtoTxt.Split(';');
+            Nome = campos[0];
+            Categoria = campos[1];
+            Foto = campos[2];
+            preco = float.Parse(campos[3]);
+        }
+
         public string toString()
         {
             return nome + ";" + categoria + ";" + foto + ";" + preco.ToString();
@@ -57,6 +76,7 @@ namespace FirstShop.BibliotecaFS.Modelo
             }
         }
 
+
         /// <summary>
         /// Atribui preço para o produto
         /// </summary>
@@ -75,7 +95,7 @@ namespace FirstShop.BibliotecaFS.Modelo
         {
             return preco;
         }
-
+        
 
 
 

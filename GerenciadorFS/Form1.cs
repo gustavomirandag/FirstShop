@@ -20,6 +20,7 @@ namespace FirstShop.GerenciadorFS
         {
             InitializeComponent();
             loja = new Loja();
+            loja.lerTxtProdutos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,11 +51,6 @@ namespace FirstShop.GerenciadorFS
             txtFoto.Text = "";
             txtPreco.Text = "";
             txtNome.Focus();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

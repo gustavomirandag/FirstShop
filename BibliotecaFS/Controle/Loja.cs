@@ -35,5 +35,20 @@ namespace FirstShop.BibliotecaFS.Controle
             }
             arquivo.Close();
         }
+
+        public void lerTxtProdutos()
+        {
+            if (!System.IO.File.Exists("produtos.txt"))
+                return; // Caso o arquivo não exista, não faça nada.
+            produtos.Clear();//Apaga a atual lista de produtos
+            System.IO.StreamReader arquivo = new System.IO.StreamReader("produtos.txt");
+            string line = arquivo.ReadLine();
+            while (line != null && line != "")
+            {
+                produtos.Add(new Produto(line));
+                line = arquivo.ReadLine();
+            }
+            arquivo.Close();
+        }
     }
 }
