@@ -43,6 +43,7 @@
     <Compile Include="Calculadora.cs" />
     <Compile Include="Controle\Loja.cs" />
     <Compile Include="Modelo\Produto.cs" />
+    <Compile Include="Modelo\Sapato.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

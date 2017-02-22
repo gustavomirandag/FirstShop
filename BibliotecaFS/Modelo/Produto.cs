@@ -29,12 +29,12 @@ namespace FirstShop.BibliotecaFS.Modelo
             Nome = campos[0];
             Categoria = campos[1];
             Foto = campos[2];
-            preco = float.Parse(campos[3]);
+            Preco = float.Parse(campos[3]);
         }
 
         public string toString()
         {
-            return nome + ";" + categoria + ";" + foto + ";" + preco.ToString();
+            return nome + ";" + categoria + ";" + foto + ";" + Preco.ToString();
         }
 
         public string Nome
@@ -76,28 +76,20 @@ namespace FirstShop.BibliotecaFS.Modelo
             }
         }
 
-
-        /// <summary>
-        /// Atribui preço para o produto
-        /// </summary>
-        /// <param name="preco">Precisa ser até R$1,99</param>
-        /// <returns>True se atribuiu com sucesso</returns>
-        public bool atribuirPreco(float preco)
+        public float Preco
         {
-            if (preco > 1.99)
-                return false; //Deu ruim
-            else
-                this.preco = preco;
-            return true;
+            get
+            {
+                return preco;
+            }
+
+            set
+            {
+                if (value <= 1.99)
+                    preco = value;
+                else
+                    throw (new Exception("Favor digitar um valor válido!"));
+            }
         }
-
-        public float obterPreco()
-        {
-            return preco;
-        }
-        
-
-
-
     }
 }

@@ -9,6 +9,7 @@ namespace FirstShop.BibliotecaFS.Controle
 {
     public class Loja
     {
+        public readonly string nomeArquivo = "produtos.txt";
         private List<Produto> produtos;
 
         public Loja()
@@ -28,7 +29,7 @@ namespace FirstShop.BibliotecaFS.Controle
 
         public void escreveTxtProdutos()
         {
-            System.IO.StreamWriter arquivo = new System.IO.StreamWriter("produtos.txt");
+            System.IO.StreamWriter arquivo = new System.IO.StreamWriter(nomeArquivo);
             foreach(Produto prod in produtos)
             {
                 arquivo.WriteLine(prod.toString());
@@ -38,10 +39,10 @@ namespace FirstShop.BibliotecaFS.Controle
 
         public void lerTxtProdutos()
         {
-            if (!System.IO.File.Exists("produtos.txt"))
+            if (!System.IO.File.Exists(nomeArquivo))
                 return; // Caso o arquivo não exista, não faça nada.
             produtos.Clear();//Apaga a atual lista de produtos
-            System.IO.StreamReader arquivo = new System.IO.StreamReader("produtos.txt");
+            System.IO.StreamReader arquivo = new System.IO.StreamReader(nomeArquivo);
             string line = arquivo.ReadLine();
             while (line != null && line != "")
             {

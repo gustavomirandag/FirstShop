@@ -29,19 +29,26 @@ namespace FirstShop.GerenciadorFS
             produto.Nome = txtNome.Text;
             produto.Categoria = txtCategoria.Text;
             produto.Foto = txtFoto.Text;
-            bool cadastrou = produto.atribuirPreco(float.Parse(txtPreco.Text));
-            if (cadastrou == false)
+            try
+            {
+                produto.Preco = float.Parse(txtPreco.Text);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+       /*     
             {
                 MessageBox.Show("Coloque um valor de preço menor ou igual a 1,99");
             }
             else
-            {
+            {*/
                 listBoxProdutos.Items.Add(txtNome.Text);
                 loja.adicionarProduto(produto);
                 apagarCampos();
 
                 loja.escreveTxtProdutos();
-            }
+           // }
         }
 
         void apagarCampos()
