@@ -32,7 +32,7 @@ namespace FirstShop.BibliotecaFS.Modelo
             Preco = float.Parse(campos[3]);
         }
 
-        public string toString()
+        public override string ToString()
         {
             return nome + ";" + categoria + ";" + foto + ";" + Preco.ToString();
         }
@@ -90,6 +90,16 @@ namespace FirstShop.BibliotecaFS.Modelo
                 else
                     throw (new Exception("Favor digitar um valor válido!"));
             }
+        }
+
+        /// <summary>
+        /// Retornar opções relacionadas ao produto.
+        /// Exemplo: Opções de Cores, Tamanhos, Voltagem etc.
+        /// </summary>
+        /// <returns>As opções são retornadas em um vetor de strings. Retorna null caso não exista nenhuma opção.</returns>
+        public virtual string[] obterOpcoes()
+        {
+            return null;
         }
     }
 }

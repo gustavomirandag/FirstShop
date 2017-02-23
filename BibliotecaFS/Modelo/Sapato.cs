@@ -8,5 +8,10 @@ namespace FirstShop.BibliotecaFS.Modelo
 {
     class Sapato : Produto
     {
+        public override string[] obterOpcoes()
+        {
+            string[] opcoes = new string[7] { "37", "38", "39", "40", "41", "42", "43" };
+            return opcoes;
+        }
     }
 }
