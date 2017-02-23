@@ -32,7 +32,7 @@ namespace FirstShop.BibliotecaFS.Controle
             System.IO.StreamWriter arquivo = new System.IO.StreamWriter(nomeArquivo);
             foreach(Produto prod in produtos)
             {
-                arquivo.WriteLine(prod.toString());
+                arquivo.WriteLine(prod.ToString());
             }
             arquivo.Close();
         }
