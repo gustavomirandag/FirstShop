@@ -23,14 +23,6 @@ namespace FirstShop.BibliotecaFS.Modelo
         /// Na ordem: nome ; categoria ; foto ; preco
         /// </summary>
         /// <param name="produtoTxt">String com os campos de um produto separados por ";"</param>
-        public Produto(string produtoTxt)
-        {
-            string[] campos = produtoTxt.Split(';');
-            Nome = campos[0];
-            Categoria = campos[1];
-            Foto = campos[2];
-            Preco = float.Parse(campos[3]);
-        }
 
         public override string ToString()
         {
@@ -85,10 +77,10 @@ namespace FirstShop.BibliotecaFS.Modelo
 
             set
             {
-                if (value <= 1.99)
+                //if (value <= 1.99)
                     preco = value;
-                else
-                    throw (new Exception("Favor digitar um valor válido!"));
+                //else
+                  //  throw (new Exception("Favor digitar um valor válido!"));
             }
         }
 

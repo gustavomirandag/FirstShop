@@ -9,12 +9,26 @@ namespace FirstShop.BibliotecaFS.Controle
 {
     public class Loja
     {
-        public readonly string nomeArquivo = "produtos.txt";
+        private string nomeArquivo;
         private List<Produto> produtos;
 
-        public Loja()
+        public Loja(string nomeArquivoAux)
         {
+            nomeArquivo = nomeArquivoAux;
             produtos = new List<Produto>();
+        }
+
+        public Produto obterProduto(string nomeProduto)
+        {
+            foreach (Produto item in produtos)
+            {
+                if (item.Nome == nomeProduto)
+                {
+                    return item;
+                }
+                
+            }
+            return null;
         }
 
         public void adicionarProduto(Produto produto)
@@ -46,7 +60,7 @@ namespace FirstShop.BibliotecaFS.Controle
             string line = arquivo.ReadLine();
             while (line != null && line != "")
             {
-                produtos.Add(new Produto(line));
+                produtos.Add(FabricaProduto.fabricar(line));
                 line = arquivo.ReadLine();
             }
             arquivo.Close();

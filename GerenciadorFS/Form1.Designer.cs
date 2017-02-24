@@ -38,12 +38,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.listBoxProdutos = new System.Windows.Forms.ListBox();
+            this.rbGenerico = new System.Windows.Forms.RadioButton();
+            this.rbSapato = new System.Windows.Forms.RadioButton();
+            this.rbCamisa = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(83, 232);
+            this.btnCadastrar.Location = new System.Drawing.Point(74, 345);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(105, 47);
             this.btnCadastrar.TabIndex = 4;
@@ -130,14 +133,55 @@
             this.listBoxProdutos.ItemHeight = 20;
             this.listBoxProdutos.Location = new System.Drawing.Point(277, 35);
             this.listBoxProdutos.Name = "listBoxProdutos";
-            this.listBoxProdutos.Size = new System.Drawing.Size(253, 284);
+            this.listBoxProdutos.Size = new System.Drawing.Size(253, 344);
             this.listBoxProdutos.TabIndex = 6;
+            this.listBoxProdutos.SelectedIndexChanged += new System.EventHandler(this.listBoxProdutos_SelectedIndexChanged);
+            this.listBoxProdutos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxProdutos_MouseDoubleClick);
+            // 
+            // rbGenerico
+            // 
+            this.rbGenerico.AutoSize = true;
+            this.rbGenerico.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbGenerico.Location = new System.Drawing.Point(42, 220);
+            this.rbGenerico.Name = "rbGenerico";
+            this.rbGenerico.Size = new System.Drawing.Size(117, 29);
+            this.rbGenerico.TabIndex = 10;
+            this.rbGenerico.TabStop = true;
+            this.rbGenerico.Text = "Genérico";
+            this.rbGenerico.UseVisualStyleBackColor = true;
+            // 
+            // rbSapato
+            // 
+            this.rbSapato.AutoSize = true;
+            this.rbSapato.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSapato.Location = new System.Drawing.Point(42, 255);
+            this.rbSapato.Name = "rbSapato";
+            this.rbSapato.Size = new System.Drawing.Size(98, 29);
+            this.rbSapato.TabIndex = 11;
+            this.rbSapato.TabStop = true;
+            this.rbSapato.Text = "Sapato";
+            this.rbSapato.UseVisualStyleBackColor = true;
+            // 
+            // rbCamisa
+            // 
+            this.rbCamisa.AutoSize = true;
+            this.rbCamisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbCamisa.Location = new System.Drawing.Point(42, 294);
+            this.rbCamisa.Name = "rbCamisa";
+            this.rbCamisa.Size = new System.Drawing.Size(102, 29);
+            this.rbCamisa.TabIndex = 12;
+            this.rbCamisa.TabStop = true;
+            this.rbCamisa.Text = "Camisa";
+            this.rbCamisa.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 345);
+            this.ClientSize = new System.Drawing.Size(557, 404);
+            this.Controls.Add(this.rbCamisa);
+            this.Controls.Add(this.rbSapato);
+            this.Controls.Add(this.rbGenerico);
             this.Controls.Add(this.listBoxProdutos);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -150,6 +194,7 @@
             this.Controls.Add(this.btnCadastrar);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,6 +212,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBoxProdutos;
+        private System.Windows.Forms.RadioButton rbGenerico;
+        private System.Windows.Forms.RadioButton rbSapato;
+        private System.Windows.Forms.RadioButton rbCamisa;
     }
 }
 

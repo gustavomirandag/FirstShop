@@ -19,13 +19,21 @@ namespace FirstShop.GerenciadorFS
         public Form1()
         {
             InitializeComponent();
-            loja = new Loja();
+            loja = new Loja(Arquivo.nomeArquivo);
             loja.lerTxtProdutos();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto();
+            Produto produto = null;
+
+            if (rbGenerico.Checked)
+                produto = new Produto();
+            else if (rbSapato.Checked)
+                produto = new Sapato();
+            else if (rbCamisa.Checked)
+                produto = new Camisa();
+
             produto.Nome = txtNome.Text;
             produto.Categoria = txtCategoria.Text;
             produto.Foto = txtFoto.Text;
@@ -36,6 +44,7 @@ namespace FirstShop.GerenciadorFS
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return;
             }
        /*     
             {
@@ -58,6 +67,57 @@ namespace FirstShop.GerenciadorFS
             txtFoto.Text = "";
             txtPreco.Text = "";
             txtNome.Focus();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach(Produto prod in loja.obterProdutos())
+            {
+                listBoxProdutos.Items.Add(prod.Nome);
+            }
+        }
+
+        private void listBoxProdutos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string nomeProduto = listBoxProdutos.SelectedItem.ToString();
+
+            Produto produto;
+            produto = loja.obterProduto(nomeProduto); //Obtive uma referência ao produto
+
+            txtNome.Text = produto.Nome;
+            txtCategoria.Text = produto.Categoria;
+            txtFoto.Text = produto.Foto;
+            txtPreco.Text = produto.Preco.ToString();
+
+            if (produto.Categoria.ToLower() == "camisa")
+                rbCamisa.Checked = true;
+            else if (produto.Categoria.ToLower() == "sapato")
+                rbSapato.Checked = true;
+            else
+                rbGenerico.Checked = true;
+
+
+
+
+        }
+
+        private void listBoxProdutos_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            string nomeProduto = listBoxProdutos.SelectedItem.ToString();
+
+            Produto produto;
+            produto = loja.obterProduto(nomeProduto); //Obtive uma referência ao produto
+
+            string[] opcoes = produto.obterOpcoes();
+            string todasAsOpcoes = "";
+
+            if (opcoes != null)
+                foreach(string opcao in opcoes)
+                {
+                    todasAsOpcoes += opcao + "; ";
+                }
+
+            MessageBox.Show(todasAsOpcoes);
         }
     }
 }
