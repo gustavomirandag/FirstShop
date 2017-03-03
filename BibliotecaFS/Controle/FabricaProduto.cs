@@ -23,7 +23,7 @@ namespace FirstShop.BibliotecaFS.Controle
             else if (categoria.ToLower() == "camisa")
                 produto = new Camisa();
             else
-                produto = new Produto();
+                produto = new Generico();
 
             produto.Nome = nome;
             produto.Categoria = categoria;

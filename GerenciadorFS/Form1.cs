@@ -28,7 +28,7 @@ namespace FirstShop.GerenciadorFS
             Produto produto = null;
 
             if (rbGenerico.Checked)
-                produto = new Produto();
+                produto = new Generico();
             else if (rbSapato.Checked)
                 produto = new Sapato();
             else if (rbCamisa.Checked)

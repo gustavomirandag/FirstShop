@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace FirstShop.BibliotecaFS.Modelo
 {
-    public class Sapato : Produto
+    public class Generico : Produto
     {
         public override string[] obterOpcoes()
         {
-
-            string[] opcoes = new string[7] { "37", "38", "39", "40", "41", "42", "43" };
-            return opcoes;
+            return null;
         }
     }
 }

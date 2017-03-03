@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BibliotecaFS.Calculadora">
-    <Position X="6.75" Y="2" Width="2.25" />
+    <Position X="11.5" Y="7.25" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABQAAA=</HashCode>
       <FileName>Calculadora.cs</FileName>
@@ -10,8 +10,50 @@
   <Class Name="FirstShop.BibliotecaFS.Modelo.Produto">
     <Position X="4.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BQAAAAAAAAAAAAAgAAAAJAAAAAAAAAQAACAAQAEAAEA=</HashCode>
+      <HashCode>AQAAAAAAAAAAAAAkACAAIAAAAAAAAAQAAAAEQAEAAEA=</HashCode>
       <FileName>Modelo\Produto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstShop.BibliotecaFS.Controle.Arquivo">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controle\Arquivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstShop.BibliotecaFS.Controle.FabricaProduto">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controle\FabricaProduto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstShop.BibliotecaFS.Controle.Loja">
+    <Position X="7.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAABEAAAAAAAAAAAAAAAAAQAAAAAAAAAAQACAE=</HashCode>
+      <FileName>Controle\Loja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstShop.BibliotecaFS.Modelo.Camisa">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\Camisa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstShop.BibliotecaFS.Modelo.Generico">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\Generico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirstShop.BibliotecaFS.Modelo.Sapato">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\Sapato.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

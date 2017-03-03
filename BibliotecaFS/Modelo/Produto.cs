@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstShop.BibliotecaFS.Modelo
 {
-    public class Produto
+    public abstract class Produto
     {
         private string nome;
         private string categoria;
@@ -89,9 +89,6 @@ namespace FirstShop.BibliotecaFS.Modelo
         /// Exemplo: Opções de Cores, Tamanhos, Voltagem etc.
         /// </summary>
         /// <returns>As opções são retornadas em um vetor de strings. Retorna null caso não exista nenhuma opção.</returns>
-        public virtual string[] obterOpcoes()
-        {
-            return null;
-        }
+        public abstract string[] obterOpcoes();
     }
 }

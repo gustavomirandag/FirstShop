@@ -12,6 +12,11 @@ namespace FirstShop.BibliotecaFS.Controle
         private string nomeArquivo;
         private List<Produto> produtos;
 
+        private Loja()
+        {
+
+        }
+
         public Loja(string nomeArquivoAux)
         {
             nomeArquivo = nomeArquivoAux;
