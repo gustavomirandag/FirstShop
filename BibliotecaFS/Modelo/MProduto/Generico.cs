@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstShop.BibliotecaFS.Modelo
+namespace FirstShop.BibliotecaFS.Modelo.MProduto
 {
     public class Generico : Produto
     {

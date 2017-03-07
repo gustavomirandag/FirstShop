@@ -44,10 +44,13 @@
     <Compile Include="Controle\Arquivo.cs" />
     <Compile Include="Controle\FabricaProduto.cs" />
     <Compile Include="Controle\Loja.cs" />
-    <Compile Include="Modelo\Camisa.cs" />
-    <Compile Include="Modelo\Generico.cs" />
-    <Compile Include="Modelo\Produto.cs" />
-    <Compile Include="Modelo\Sapato.cs" />
+    <Compile Include="Modelo\MProduto\Camisa.cs" />
+    <Compile Include="Modelo\MProduto\Generico.cs" />
+    <Compile Include="Modelo\MProduto\Produto.cs" />
+    <Compile Include="Modelo\MProduto\Sapato.cs" />
+    <Compile Include="Modelo\MUsuario\Cliente.cs" />
+    <Compile Include="Modelo\MUsuario\Estoquista.cs" />
+    <Compile Include="Modelo\MUsuario\IUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

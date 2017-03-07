@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FirstShop.BibliotecaFS.Modelo;
+using FirstShop.BibliotecaFS.Modelo.MProduto;
 
 namespace FirstShop.BibliotecaFS.Controle
 {

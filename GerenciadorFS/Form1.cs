@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FirstShop.BibliotecaFS.Modelo;
+using FirstShop.BibliotecaFS.Modelo.MProduto;
+using FirstShop.BibliotecaFS.Modelo.MUsuario;
 using FirstShop.BibliotecaFS.Controle;
 
 namespace FirstShop.GerenciadorFS
@@ -15,12 +16,14 @@ namespace FirstShop.GerenciadorFS
     public partial class Form1 : Form
     {
         Loja loja;
+        IUsuario usuario;
 
         public Form1()
         {
             InitializeComponent();
             loja = new Loja(Arquivo.nomeArquivo);
             loja.lerTxtProdutos();
+            usuario = new Estoquista();
         }
 
         private void button1_Click(object sender, EventArgs e)
